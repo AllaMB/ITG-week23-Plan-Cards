@@ -1,0 +1,66 @@
+    $main-font-family: Arial, Helvetica, sans-serif;
+    $main-text-color: rgb(248, 248, 248);
+    $accent-color: rgb(53, 52, 52);
+    $selected-zoom: 1.2;
+    $selected-translate-y: -5%;
+
+    .card {
+    font-family: $main-font-family;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__body {
+        display: grid;
+    }
+
+    &__title {
+        padding: 20px 0;
+        color: $main-text-color;
+        border-bottom: 1px solid rgb(255, 255, 255);
+    }
+
+    &__price {
+        display: flex;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    &__priceBig {
+        font-size: 3rem;
+    }
+
+    &__priceBottom {
+        align-self: end;
+    }
+
+    &__price,
+    &__speed {
+        color: $main-text-color;
+    }
+
+    &__speed {
+        padding: 30px 20px;
+        background-color: rgb(248, 248, 248);
+    }
+
+    &__text {
+        color: $accent-color;
+    }
+
+    &__footer {
+        padding: 20px 20px;
+        background-color: rgb(238, 238, 238);
+    }
+
+    &.selected {
+        zoom: $selected-zoom;
+        transform: translateY($selected-translate-y);
+        box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    }
